@@ -56,6 +56,7 @@ module.exports = {
 			directory: path.resolve(__dirname, "dist")
 		}
 	},
+	devtool: isDev ? "source-map" : false,
 	optimization: optimization(),
 	module: {
 		rules: [
@@ -98,6 +99,7 @@ module.exports = {
 		}),
 	],
 	resolve: {
-		extensions: [".js", ".jsx", ".ts", ".tsx"]
+		extensions: [".js", ".jsx", ".ts", ".tsx"],
+		alias: []
 	}
 }
